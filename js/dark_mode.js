@@ -14,11 +14,13 @@ define(['storage'], function(storage) {
   }
 
   function loadDarkModePreference() {
-    chrome.storage.local.get([DARK_MODE_KEY], function(result) {
-      if (result[DARK_MODE_KEY]) {
-        enableDarkMode();
-      }
-    });
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+      chrome.storage.local.get([DARK_MODE_KEY], function(result) {
+        if (result[DARK_MODE_KEY]) {
+          enableDarkMode();
+        }
+      });
+    }
   }
 
   function toggleDarkMode() {
@@ -40,9 +42,11 @@ define(['storage'], function(storage) {
   }
 
   function saveDarkModePreference(enabled) {
-    var data = {};
-    data[DARK_MODE_KEY] = enabled;
-    chrome.storage.local.set(data);
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+      var data = {};
+      data[DARK_MODE_KEY] = enabled;
+      chrome.storage.local.set(data);
+    }
   }
 
   return {
