@@ -1129,6 +1129,28 @@ body {
 #main-container > .inner > .app-left .switcher .scroll .scroll-content .child-button:hover {
   background-color: #d7d7d7;
 }
+#main-container > .inner > .app-left .switcher .scroll .scroll-content .dark-mode-toggle {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: url('pointer.cur'), auto;
+  margin: 125px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+#main-container > .inner > .app-left .switcher .scroll .scroll-content .dark-mode-toggle:hover {
+  background-color: #d7d7d7;
+}
+#main-container > .inner > .app-left .switcher .scroll .scroll-content .dark-mode-toggle .toggle-label {
+  font-weight: normal;
+}
 #main-container > .inner > .app-right {
   height: 100%;
   flex-grow: 1;
@@ -1364,5 +1386,142 @@ body {
 }
 #main-container.collapsed-tree.reveal-tree > .inner > .app-left .scroll {
   left: 0;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-left {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+body.dark-mode #main-container > .inner > .app-left .header {
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #3a3a3a;
+}
+body.dark-mode #main-container > .inner > .app-left .header .button {
+  border-right: 1px solid #3a3a3a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-left .header .button:hover {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-left .header .button-collapse {
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #3a3a3a;
+}
+body.dark-mode #main-container > .inner > .app-left .header .logo {
+  border-right: 1px solid #3a3a3a;
+}
+body.dark-mode #main-container > .inner > .app-left .header .logo:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode #main-container > .inner > .app-left .header .logo .text {
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll {
+  border: 1px solid #3a3a3a;
+  background-color: #252525;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll::-webkit-scrollbar {
+  background-color: #2a2a2a;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border: 3px solid #2a2a2a;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .reveal-container .button {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #999;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .reveal-container .button:hover {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .tab-tree .node .tab .arrow span {
+  color: #999;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .tab-tree .node .tab .button {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .tab-tree .node .tab .button:hover {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .tab-tree .node.selected > .tab .button {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .tab-tree .node .tab .button .icon {
+  color: #999;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .tab-tree .node .tab .button .icon.close:hover {
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .new-tab-button,
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .child-button,
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .dark-mode-toggle {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .new-tab-button:hover,
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .child-button:hover,
+body.dark-mode #main-container > .inner > .app-left .switcher .scroll .scroll-content .dark-mode-toggle:hover {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-right {
+  background-color: #1a1a1a;
+}
+body.dark-mode #main-container > .inner > .app-right #welcome .hints .hint {
+  color: #999;
+}
+body.dark-mode #main-container > .inner > .app-right #welcome .hints .hint code {
+  border: 1px solid #666;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .bar-buttons .button {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .bar-buttons .button:hover {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .bar-buttons .button.disabled {
+  background-color: #2a2a2a;
+  color: #666;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .input-text input {
+  border: 1px solid #3a3a3a;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .input-text input:focus {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .top,
+body.dark-mode #main-container > .inner > .app-right .tab .settings .inner,
+body.dark-mode #main-container > .inner > .app-right .tab .find .inner,
+body.dark-mode #main-container > .inner > .app-right .tab .alert {
+  background-color: #252525;
+  border-bottom: 1px solid #3a3a3a;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .dialog .box {
+  background-color: #252525;
+  border: 1px solid #3a3a3a;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .dialog .box .buttons .button {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .dialog .box .buttons .button:hover {
+  background-color: #333;
+}
+body.dark-mode #main-container > .inner > .app-right .tab .dialog .box .buttons .button.disabled {
+  background-color: #2a2a2a;
+  color: #666;
 }
 /*# sourceMappingURL=styles/css/style.css.map */
