@@ -1,5 +1,5 @@
-require(['keybindings', 'tabs', 'tab_content', 'welcome_screen'],
-  function(keybindings, tabs, tab_content, welcome_screen) {
+require(['keybindings', 'tabs', 'tab_content', 'welcome_screen', 'dark_mode'],
+  function(keybindings, tabs, tab_content, welcome_screen, dark_mode) {
   'use strict';
 
   $(document).ready(function() {
@@ -34,6 +34,7 @@ require(['keybindings', 'tabs', 'tab_content', 'welcome_screen'],
     keybindings.init();
     tabs.init(_templates);
     tab_content.init(_templates);
+    dark_mode.init();
 
   });
 });
